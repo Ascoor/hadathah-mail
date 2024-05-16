@@ -1,0 +1,3 @@
+mail._domainkey	IN	TXT	( "v=DKIM1; h=sha256; k=rsa; s=email; "
+	  "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzKKCTZ4Dp7CG5MwOPNm6tB5FxHMphB2IsBIxw09xsMtBX0mQPvvbt5lEfe/tEMHVlfQ8henR/DyLyHnH3MXh1Gcsq7fCZx2BNSq5rmarujA/BL4oN7zi0MylxFrCcyYk3NBxKBrVUQrX5bc/3JBCrV9jsNgCLwTf1roX3UARugdx3pv85sc2mlOYZ2O31pnCMwB7ZrgwaMlK1r"
+	  "efGBXr8zPbFK3EptBwQ2dq1HBIilS++F6+M8pTAsqq7zTClaiigX/S1VnT+PT/HJrfLnHtURF/A3/M3cQhKHAkq1MAVqfijKnxeSLtCYVtNUoYuNTues1CI+WnM0+C6gEI/IbhRQIDAQAB" )  ; ----- DKIM key mail for localhost

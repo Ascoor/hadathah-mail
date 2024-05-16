@@ -1,0 +1,107 @@
+Return-Path: <mr.askar1984@gmail.com>
+Delivered-To: me@hadathah.org
+Received: from mail.hadathah.org ([127.0.0.1])
+	by mail.hadathah.org with LMTP
+	id g1awOTl+RWYADwAACaPrkw
+	(envelope-from <mr.askar1984@gmail.com>)
+	for <me@hadathah.org>; Thu, 16 May 2024 06:32:09 +0300
+X-Spam-Checker-Version: SpamAssassin 3.4.6 (2021-04-09) on mail.hadathah.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.3 required=5.0 tests=DKIM_SIGNED,DKIM_VALID,
+	DKIM_VALID_AU,DMARC_PASS,FREEMAIL_FROM,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,
+	RCVD_IN_MSPIKE_H2,SPF_HELO_NONE,SPF_PASS autolearn=ham
+	autolearn_force=no version=3.4.6
+X-Spam-Report: 
+	* -0.1 SPF_PASS SPF check passed
+	* -0.1 DMARC_PASS DMARC check passed
+	*  0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail
+	*      provider
+	*      [mr.askar1984[at]gmail.com]
+	*  0.0 SPF_HELO_NONE SPF: HELO does not publish an SPF Record
+	*  0.0 HTML_MESSAGE BODY: HTML included in message
+	*  0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+	*       valid
+	* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from
+	*      author's domain
+	* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+	* -1.0 RCVD_IN_MSPIKE_H2 RBL: Average reputation (+2)
+	*      [209.85.128.182 listed in wl.mailspike.net]
+	* -0.0 RCVD_IN_DNSWL_NONE RBL: Sender listed at
+	*      https://www.dnswl.org/, no trust
+	*      [209.85.128.182 listed in list.dnswl.org]
+X-Spam-Score: -1.3
+Authentication-Results: mail.hadathah.org; dmarc=pass (p=none dis=none) header.from=gmail.com
+Authentication-Results: mail.hadathah.org; spf=pass smtp.mailfrom=gmail.com
+Authentication-Results: mail.hadathah.org;
+	dkim=pass (2048-bit key; unprotected) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20230601 header.b=UY7xsvS6;
+	dkim-atps=neutral
+Received: from mail-yw1-f182.google.com (mail-yw1-f182.google.com [209.85.128.182])
+	(using TLSv1.3 with cipher TLS_AES_128_GCM_SHA256 (128/128 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by mail.hadathah.org (Postfix) with ESMTPS id B239C4923C
+	for <me@hadathah.org>; Thu, 16 May 2024 06:32:09 +0300 (+03)
+Received: by mail-yw1-f182.google.com with SMTP id 00721157ae682-61d35d266e7so90196897b3.1
+        for <me@hadathah.org>; Wed, 15 May 2024 20:32:09 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1715830328; x=1716435128; darn=hadathah.org;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=1dDiwJHi4UwJPsVoJnJiGJGJIxPMN+oItzI15ZEoQMo=;
+        b=UY7xsvS63nOPTQvo1Z+msz+EJB2H2v40tH0LqujMt62sKWABeuZuSjpSoU/ncruUUc
+         f3N69oXaEyqKOy5J4WFZqJ3jGpVsTdcv1/gZfRIqlM80/st3hlwCkotzeSzdIvNZtzfl
+         Z8PKMSPcKm4k+vqw+kMbaLPmb1pbI1GzODHNQpnpindZoLaBk5ihke2tmK+gD6FsTJN+
+         lIzzfuXMW0J0OyO2W0GCRJOswngbSj/j33d58GvJRzgtFhvL4cro997UoCxdx0wfyh4I
+         qQx8lrV7uy0h/DW9Uv8w3SWLC2JWatyy3UAG/tzj+JBRlA17QSW0lFA5FAABMSdoPGB3
+         j6Cw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1715830328; x=1716435128;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=1dDiwJHi4UwJPsVoJnJiGJGJIxPMN+oItzI15ZEoQMo=;
+        b=ijSDIQeJk5fphnGj2Q3sQJBBNBmoZUnpMVwQPgfo4FwzYCavrf/+toBH3Ir/C7IrKR
+         fLdje5LIdPkHHSR8VQtzGDEqbNO5QA+6JnaSA2lVPnLaKZMCDf0TfPwKntM81RPyZNm5
+         y/vaVdyji1itMSnRQPEuGiWOhAkpzz1Gj8F9DwrSrwqFYcmTI9mxuYsSQYTsFKvLAYpD
+         szXxXLLtz2bQWiWQXtLu84Qd0RfA4cCoDj85thd4KFtv+JJp5QKtVe2kV/l+Ent+Mbak
+         sY/8/yA6C8YdjcUb5RRyGpIzlvJgryViwj9kYMbvEOwN0KBot9tcHXM0rUGVIqfGyHcL
+         QOLw==
+X-Gm-Message-State: AOJu0YyeIT1vjj1j5DyBQXf2qHWneBIQCfIW2+ivjxXqXIYcxRhdPanD
+	TfUsL6fgHk9TORbIfKv++//KmTvpNFWy68YZw24MMvbJnQ6UqkBjh+VAigFBbj4ZFebYcRNUqXj
+	nCtrIs7d4Zcae1m9VLzv14/hSYROScw==
+X-Google-Smtp-Source: AGHT+IF+hIyAMPAaS7hdP895/+ufsIbHCIaQlEU2tbdlt8osTnob5OTEkj5gMHhffV8h0KtlEYpuFLGoC3zBaRauMaY=
+X-Received: by 2002:a25:9246:0:b0:dc6:c510:447a with SMTP id
+ 3f1490d57ef6-dee4f50f8fbmr16100221276.58.1715830327976; Wed, 15 May 2024
+ 20:32:07 -0700 (PDT)
+MIME-Version: 1.0
+References: <807028495005947b65f6c47693fb4131@hadathah.org>
+In-Reply-To: <807028495005947b65f6c47693fb4131@hadathah.org>
+From: Abd Elhamed Askar <mr.askar1984@gmail.com>
+Date: Thu, 16 May 2024 06:31:56 +0300
+Message-ID: <CABhQN5P2qpQWoBrY=qA_4s9+iNh5vAsyN-QifuSjBdqTXs1UVw@mail.gmail.com>
+Subject: Re: sadsad
+To: me@hadathah.org
+Content-Type: multipart/alternative; boundary="00000000000031ae4a061889e186"
+
+--00000000000031ae4a061889e186
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+dasdasd
+
+On Thu, May 16, 2024 at 6:31=E2=80=AFAM <me@hadathah.org> wrote:
+
+> asdasdasd
+>
+
+--00000000000031ae4a061889e186
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">dasdasd</div><br><div class=3D"gmail_quote"><div dir=3D"lt=
+r" class=3D"gmail_attr">On Thu, May 16, 2024 at 6:31=E2=80=AFAM &lt;<a href=
+=3D"mailto:me@hadathah.org">me@hadathah.org</a>&gt; wrote:<br></div><blockq=
+uote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1p=
+x solid rgb(204,204,204);padding-left:1ex">asdasdasd<br>
+</blockquote></div>
+
+--00000000000031ae4a061889e186--

@@ -1,0 +1,10 @@
+Private-key-format: v1.2
+Algorithm: 8 (RSASHA256)
+Modulus: xIKRctykCuRZU7drjdnALdZSA609kjhkUinj+U6dz4SVu3vQD96T4BlUdkePRabcrGxzDGlzpTBysd0s+a/BYoNEjKwdEoOpJp/t7Q75SJ7aYo0BLRCvRtVsxoHKVuxRvybl/fcvMB3agAwEM4M5yJZ7Kl/eJ4z6PnyWFR0wRYk=
+PublicExponent: AQAB
+PrivateExponent: I6bUoJQrJta65hdW6gthdG93vbcGfqrAeK+k7qw2sVmKmNMjsl1dUsEFs9fTxH07eATM8qmHE6cwh9hqunoKiXUEUt0TD1/TWaLWpdKiGJTdSr0horG0hrsR/lwWUqEBANPxMrOGw7nNezxAYAhzh91/4sljQl1gmet25IMpo8k=
+Prime1: +wvuMjLV0bFl1faSyacihoCAdEXDi5Hn427P9JtHWCNTblr1CNBUClILyqcLLzbwXlyhmq/PaV02cP/Fm7Y5Iw==
+Prime2: yGMqkWKVgwPoccU3BNwXY/g6fhcuBfihT8Ogjl/2kxza+J4u8FHfCQsJeARm4OraQ5Q3AyU4eaweOHCL1WZvYw==
+Exponent1: kaitbtDSANXF+WwUZQ4lWRbr8QqdV7iza+FapVkG/xuYB9qce52sdUR/dPiQ47cjpgxm84J4fHDJ6qxsclk7Mw==
+Exponent2: tk+KhfUkQ6uFiiS8Nr6qxTgst1UNeT9IO9Kmu4HRSuzAx9rap6hE++w/tCKFGvJwm3U4S7NMW15drEmw3vkwMw==
+Coefficient: 3G4cadwqzQ8fvbXTo72q2FHx7zGFTLMviPffL/BH60dwGlIEZ+olgu9LiGJFS+TPRMFFjd8oIDqz9JYV8Fivsg==
